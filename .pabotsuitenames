@@ -1,0 +1,14 @@
+datasources:3291630c59507600e486d12e9f2e5ba491080e29
+commandlineoptions:5ea3922db11a42de3fa4c89e9d9f06972f891d9e
+suitesfrom:no-suites-from-option
+file:6b1027358c1b35ffbb112abd58c9b30727cc7d58
+--suite Tests.Api.test API
+--suite Tests.Hybrid.TC HY 01
+--suite Tests.Hybrid.TC HY 02
+--suite Tests.Hybrid.TC HY 03
+--suite Tests.Ui.Test Login
+--suite Tests.Ui.Test Open Account
+--suite Tests.Ui.Test Registration
+--suite Tests.Ui.Test Transfer Funds
+--suite Tests.Ui.Test Ui Defect 01
+--suite Tests.Ui.Test Ui Defect 02

@@ -1,0 +1,47 @@
+*** Settings ***
+Library    SeleniumLibrary
+Resource    ../../resources/keywords/common_keywords.robot
+Resource    ../../resources/pages/TransferFundPage.robot
+Resource    ../../resources/pages/OpenAccountPage.robot
+
+
+Suite Setup    Load Environment
+Test Setup    Open Application
+Test Teardown    Close Application
+
+
+*** Test Cases ***
+TC-TF-UI-02 Transfer Negative Amount
+    [Documentation]    It checks the behaviour on transferring any negative amount
+    [Tags]    Fail
+
+    Register User Or Login User
+    Go To Open New Account Page
+    Enter Account Details    SAVINGS  0
+    Verify Account Opened Successfully
+
+
+    Wait Until Element Is Visible    ${account_no}    20s
+    ${accId_src}=    Get Text    ${account_no}
+
+
+    Go To Open New Account Page
+    Enter Account Details    CHECKING  0
+    Verify Account Opened Successfully
+
+
+    Wait Until Element Is Visible    ${account_no}    20s
+    ${accId_dest}=    Get Text    ${account_no}
+
+    Sleep   10s
+
+    Go To Transfer Funds Page
+    Enter Transfer Details    -20   ${accId_src}   ${accId_dest}
+
+    Click Transfer Button
+
+    Verify Transfer Is Successful
+    Sleep   10s
+
+    Page Should Contain    -$20.00 has been transferred from account #${accId_src} to account #${accId_dest}.
+
