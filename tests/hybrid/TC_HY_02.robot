@@ -14,9 +14,9 @@ Test Setup    Open Application
 Test Teardown    Close Application
 
 *** Test Cases ***
-Create Account via UI and Validate Type and Balance Match in API
+TC-HY-02 Create Account via UI and Validate Type and Balance Match in API
     [Documentation]   This test case verifies that an account created on UI is present in API
-    Register User Or Login User
+    Login User
     Go To Open New Account Page
     Enter Account Details    CHECKING  0
     Verify Account Opened Successfully

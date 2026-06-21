@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../../resources/variables/open_account_locators.robot
+Resource    ../../variables/open_account_locators.robot
 
 *** Keywords ***
 Go To Open New Account Page

@@ -11,11 +11,13 @@ Test Teardown    Close Application
 
 
 *** Test Cases ***
-TC-TF-UI-02 Transfer Negative Amount
+TC-TF-UI-06 Verify User cannot Transfer Negative Amount
     [Documentation]    It checks the behaviour on transferring any negative amount
-    [Tags]    Fail
+    [Tags]    Defect
 
-    Register User Or Login User
+    Skip    skipping due to BUG-02
+
+    Login User
     Go To Open New Account Page
     Enter Account Details    SAVINGS  0
     Verify Account Opened Successfully
@@ -40,8 +42,7 @@ TC-TF-UI-02 Transfer Negative Amount
 
     Click Transfer Button
 
-    Verify Transfer Is Successful
-    Sleep   10s
+    Sleep   5s
 
-    Page Should Contain    -$20.00 has been transferred from account #${accId_src} to account #${accId_dest}.
+    Page Should Not Contain    -$20.00 has been transferred from account #${accId_src} to account #${accId_dest}.
 

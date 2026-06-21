@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 Library    ../../config/env_loader.py
 Resource    ../../resources/pages/LoginPage.robot
-Resource    ../../resources/pages/RegisterPage.robot
+
 
 
 *** Variables ***
@@ -30,21 +30,21 @@ Close Application
     [Documentation]  Closing the application
     Close All Browsers
 
-Register User Or Login User
+Login User
     [Documentation]    It registers the user if login is fail
     Enter Login Details    ${USERNAME}  ${PASSWORD}
     Click Login Button
     
-    ${login_success}=    Run Keyword And Return Status    Verify Login Is Successful
-    IF    '${login_success}' == 'False'
-        Go To Register Page
-        Fill Registration Details    abc    cd    123jk    jk    raj   12345    1234567890   123   abc  cdef   cdef
-        Click Register Button
-        Verify Registration Is Successful
-        Click Element    ${logout_link}
-        Enter Login Details    abc   cdef
-        Click Login Button
-        Verify Login Is Successful
-    END
+#    ${login_success}=    Run Keyword And Return Status    Verify Login Is Successful
+#    IF    '${login_success}' == 'False'
+#        Go To Register Page
+#        Fill Registration Details    abc    cd    123jk    jk    raj   12345    1234567890   123   abc  cdef   cdef
+#        Click Register Button
+#        Verify Registration Is Successful
+#        Click Element    ${logout_link}
+#        Enter Login Details    abc   cdef
+#        Click Login Button
+#        Verify Login Is Successful
+#    END
 
     

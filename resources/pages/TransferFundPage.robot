@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../../resources/variables/transfer_funds_locators.robot
+Resource    ../../variables/transfer_funds_locators.robot
 
 
 *** Keywords ***

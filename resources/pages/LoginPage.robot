@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource   ../../resources/variables/login_locators.robot
+Resource   ../../variables/login_locators.robot
 
 *** Keywords ***
 Enter Login Details

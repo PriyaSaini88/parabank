@@ -15,9 +15,9 @@ Test Setup    Open Application
 Test Teardown    Close Application
 
 *** Test Cases ***
-Transfer Funds via UI And validate Source Debit And Destination Credit in API
+TC-HY-03 Transfer Funds via UI And validate Source Debit And Destination Credit in API
     [Documentation]    This test case verifies that funds transferred via UI is reflected in API with correct debit and credit entries
-    Register User Or Login User
+    Login User
     Go To Open New Account Page
     Enter Account Details    SAVINGS  0
     Verify Account Opened Successfully

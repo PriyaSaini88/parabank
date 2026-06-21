@@ -36,11 +36,10 @@ Login To Application
     ...   api_session
     ...   /login/${API_USERNAME}/${API_PASSWORD}
 
-
     Should Be Equal As Integers    ${response.status_code}    200
 
-
     Log To Console    ${response.json()}
+
     ${body}=  Set Variable  ${response.json()}
     ${customer_id}=  Get From Dictionary    ${body}   id
 
@@ -63,7 +62,9 @@ Open new Account
     Should Be Equal As Integers    ${response.status_code}    200
 
     Log To Console    ${response.json()}
+
     ${body}=  Set Variable  ${response.json()}
+
     ${new_account_id}=  Get From Dictionary    ${body}   id
     ${account_type}=  Get From Dictionary    ${body}   type
     ${account_balance}=  Get From Dictionary    ${body}   balance

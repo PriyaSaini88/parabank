@@ -12,7 +12,7 @@ Test Teardown    Close Application
 TC-REG-UI-01 Verify User Can Register Successfully
     [Documentation]  This test case verifies that a user can register successfully.
     Go To Register Page
-    Fill Registration Details    ab    cd    123jk    jk    raj   12345    1234567890   123   abc  cdef   cdef
+    Fill Registration Details    ab    cd    123jk    jk    raj   12345    1234567890   123   abcd   cdef   cdef
     Click Register Button
     Verify Registration Is Successful
 

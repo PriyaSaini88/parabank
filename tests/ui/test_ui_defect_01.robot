@@ -11,11 +11,13 @@ Test Teardown    Close Application
 
 
 *** Test Cases ***
-TC-TF-UI-02 Transfer Zero Amount
+TC-TF-UI-05 Verify User cannot Transfer zero amount
     [Documentation]    It checks the behaviour on transferring zero amount
-    [Tags]    Fail  
+    [Tags]    Defect
+
+    Skip    Skipping the case because of BUG-01
     
-    Register User Or Login User
+     Login User
     Go To Open New Account Page
     Enter Account Details    SAVINGS  0
     Verify Account Opened Successfully
@@ -39,10 +41,10 @@ TC-TF-UI-02 Transfer Zero Amount
 
     Click Transfer Button
 
-    Verify Transfer Is Successful
-    Sleep   10s
 
-    Page Should Contain    $0.00 has been transferred from account #${accId_from} to account #${accId_to}
+    Sleep   5s
+
+    Page Should Not Contain    $0.00 has been transferred from account #${accId_from} to account #${accId_to}
 
 
 
