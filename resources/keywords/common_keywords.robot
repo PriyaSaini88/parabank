@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    ../../config/env_loader.py
-Resource    ../../resources/pages/LoginPage.robot
+Resource    ../../resources/pages/login_page.robot
 
 
 
