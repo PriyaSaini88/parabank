@@ -54,6 +54,9 @@ TC-API-03 Verify Get Accounts Response is Not Empty
 
     Should Be Equal As Integers    ${response.status_code}   200
     
+    ${response_time}=   Evaluate    $response.elapsed.total_seconds() * 1000
+    Should Be True    ${response_time} < 3000
+    
     Should Not Be Empty    ${response.json()}
 
 

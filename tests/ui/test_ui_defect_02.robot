@@ -1,8 +1,8 @@
 *** Settings ***
 Library    SeleniumLibrary
 Resource    ../../resources/keywords/common_keywords.robot
-Resource    ../../resources/pages/TransferFundPage.robot
-Resource    ../../resources/pages/OpenAccountPage.robot
+Resource    ../../resources/pages/transfer_fund_page.robot
+Resource    ../../resources/pages/open_account_page.robot
 
 
 Suite Setup    Load Environment

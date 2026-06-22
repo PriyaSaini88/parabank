@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Resource    ../../resources/keywords/common_keywords.robot
-Resource    ../../resources/pages/LoginPage.robot
+Resource    ../../resources/pages/login_page.robot
 
 Suite Setup    Load Environment
 Test Setup    Open Application

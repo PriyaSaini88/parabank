@@ -1,7 +1,7 @@
 *** Settings ***
 Resource    ../../resources/keywords/common_keywords.robot
 Resource    ../../resources/keywords/api_keywords.robot
-Resource    ../../resources/pages/OpenAccountPage.robot
+Resource    ../../resources/pages/open_account_page.robot
 
 
 Suite Setup    Run Keywords
